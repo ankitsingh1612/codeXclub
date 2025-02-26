@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodexClub - Coding Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+
+        .dark {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .dark header {
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #333;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            color: #4a6cf7;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #4a6cf7;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        .dark .hero {
+            background-color: #222;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4a6cf7;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .dark .hero-description {
+            color: #999;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 0.5rem;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #4a6cf7;
+            color: white;
+            border: none;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #4a6cf7;
+            border: 1px solid #4a6cf7;
+        }
+
+        /* Features */
+        .features {
+            padding: 4rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .feature-card {
+            background-color: #222;
+            border: 1px solid #333;
+        }
+
+        /* Adjust spacing between sections */
+        .about {
+            padding: 3rem 0;
+            /* Reduced padding */
+        }
+
+        /* Fixed background color */
+        .about {
+            background-color: #f8f9fa;
+            /* Matches other light sections */
+        }
+
+        .dark .about {
+            background-color: #222;
+            /* Dark mode consistency */
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .dark footer {
+            background-color: #222;
+            border-top: 1px solid #333;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: inherit;
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">CodexClub</a>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#features" class="nav-link">Features</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Master Your Code Journey</h1>
+                <p class="hero-description">Join our community of developers and transform your coding expertise</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Start Learning</button>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Our Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Coding Challenges</h3>
+                        <p>Practice with real-world coding challenges</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Live Collaboration</h3>
+                        <p>Work together with other developers</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Expert Mentorship</h3>
+                        <p>Learn from industry professionals</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>CodexClub is a thriving community of developers passionate about learning, sharing, and growing
+                    together.</p>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Email: contact@codexclub.com</p>
+                <p>Follow us on social media for the latest updates!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> CodexClub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
